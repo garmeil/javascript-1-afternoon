@@ -16,6 +16,7 @@ var name = 'Tyler';
   Create a function called isTyler that accepts name as it's only parameter.
   If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 */
+const isTyler = name => name === 'Tyler'? true:false
 
 //Code Here
 
@@ -28,8 +29,9 @@ var name = 'Tyler';
 */
 
 //Code Here
-
-
+function getName(){
+  return prompt("What's your name?")
+}
 
 ////////// PROBLEM 3 //////////
 
@@ -41,16 +43,17 @@ var name = 'Tyler';
 */
 
 //Code Here
-
-
-
+const welcome = () => {
+  let username = getName() 
+  alert("Welcome, " + username)
+}
 ////////// PROBLEM 4 //////////
 
 /*
   What is the difference between arguments and parameters?
 */
 
-//Answer Here
+//parameters are a placeholder while arguments are the actual passed in data
 
 
 
@@ -60,7 +63,7 @@ var name = 'Tyler';
   What are all the falsy values in JavaScript and how do you check if something is falsy?
 */
 
-//Answer Here
+//0, false, NaN, '', undefined, null
 
 
 
@@ -71,7 +74,9 @@ var name = 'Tyler';
 */
 
 //Code Here
-  
+  function myName () {
+    return "Cody Mayo"
+  }
 
 
 /*
@@ -79,6 +84,7 @@ var name = 'Tyler';
 */
 
 //Code Here
+const newMyName = myName;
 
 
 
@@ -97,12 +103,17 @@ var name = 'Tyler';
 */
 
 //Code Here
-
+const outerFn = function() {
+  return function(){
+    return "Cody"
+  }
+}
 
 
 /*
   Now save the result of invoking outerFn into a variable called innerFn.
 */
+const innerFn = outerFn();
 
 //Code Here
 
@@ -111,5 +122,5 @@ var name = 'Tyler';
 /* 
   Now invoke innerFn.
 */
-
+innerFn()
 // Code Here
